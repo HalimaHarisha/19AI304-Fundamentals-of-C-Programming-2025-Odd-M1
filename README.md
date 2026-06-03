@@ -172,7 +172,39 @@ Thus, the program was implemented and executed successfully, and the required ou
 ### Step 8:   
   Stop
 # Program:
+```
+#include <stdio.h>
+
+int main() {
+    int a, b;
+    printf("Enter two integers: ");
+    scanf("%d %d", &a, &b);
+    printf("\nArithmetic Operations:\n");
+    printf("Addition (a + b): %d\n", a + b);
+    printf("Subtraction (a - b): %d\n", a - b);
+    printf("Multiplication (a * b): %d\n", a * b);
+
+    if (b != 0) {
+        printf("Division (a / b): %d\n", a / b);
+        printf("Remainder (a %% b): %d\n", a % b);
+    } else {
+        printf("Division and Remainder not possible (division by zero)\n");
+    }
+    printf("\nBitwise Operations:\n");
+    printf("AND (a & b): %d\n", a & b);
+    printf("OR (a | b): %d\n", a | b);
+    printf("XOR (a ^ b): %d\n", a ^ b);
+    printf("Left Shift (a << 1): %d\n", a << 1);
+    printf("Right Shift (a >> 1): %d\n", a >> 1);
+    printf("NOT (~a): %d\n", ~a);
+
+    return 0;
+}
+```
 # Output:
+
+<img width="416" height="589" alt="image" src="https://github.com/user-attachments/assets/ab45cc95-fd61-4248-9944-3f1359e27a29" />
+
 # Result: 
 Thus, the program was implemented and executed successfully, and the required output was obtained.
 
@@ -220,36 +252,24 @@ Thus, the program was implemented and executed successfully, and the required ou
 
 ~~~
 #include <stdio.h>
-
 int main() {
-    int a, b;
-    printf("Enter two integers: ");
-    scanf("%d %d", &a, &b);
-    printf("\nArithmetic Operations:\n");
-    printf("Addition (a + b): %d\n", a + b);
-    printf("Subtraction (a - b): %d\n", a - b);
-    printf("Multiplication (a * b): %d\n", a * b);
-
-    if (b != 0) {
-        printf("Division (a / b): %d\n", a / b);
-        printf("Remainder (a %% b): %d\n", a % b);
-    } else {
-        printf("Division and Remainder not possible (division by zero)\n");
-    }
-    printf("\nBitwise Operations:\n");
-    printf("AND (a & b): %d\n", a & b);
-    printf("OR (a | b): %d\n", a | b);
-    printf("XOR (a ^ b): %d\n", a ^ b);
-    printf("Left Shift (a << 1): %d\n", a << 1);
-    printf("Right Shift (a >> 1): %d\n", a >> 1);
-    printf("NOT (~a): %d\n", ~a);
-
+    char ch;
+    printf("Enter a character: ");
+    scanf("%c", &ch);
+    (ch >= '0' && ch <= '9') ?
+        printf("The character is a Digit.\n") :
+    ((ch >= 'A' && ch <= 'Z') || (ch >= 'a' && ch <= 'z')) ?
+        ((ch == 'A' || ch == 'E' || ch == 'I' || ch == 'O' || ch == 'U' ||
+          ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u') ?
+            printf("The character is a Vowel.\n") :
+            printf("The character is a Consonant.\n")) :
+        printf("The character is a Special Symbol.\n");
     return 0;
 }
 ~~~
 # Output:
 
-<img width="386" height="568" alt="image" src="https://github.com/user-attachments/assets/fd54d62f-911b-495d-b140-350d9105e9ef" />
+<img width="538" height="299" alt="image" src="https://github.com/user-attachments/assets/6383108d-f790-449e-8122-087a9084c6eb" />
 
 
 # Result: 
